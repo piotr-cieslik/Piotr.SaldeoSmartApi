@@ -1,4 +1,7 @@
 # SaldeoSmartApi
+
+[![Build Status](https://dev.azure.com/piotrcieslik/public/_apis/build/status/piotr-cieslik.Piotr.SaldeoSmartApi?branchName=master)](https://dev.azure.com/piotrcieslik/public/_build/latest?definitionId=2&branchName=master)
+
 Unofficial .net wrapper for SaldeoSMART API (https://www.saldeosmart.pl). The library is not finished yet, but it's useful enough to share. It allows to send valid GET and POST request to the API. Please notice that I am not working for company that owns SaldeoSMART and this wrapper is not approved by them.
 
 The library was created based on documentation 3.0.22, from 25.03.2019.
