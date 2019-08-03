@@ -26,16 +26,38 @@ namespace Piotr.SaldeoSmartApi.Examples
                 var path = Paths.CompanyList.Version0;
                 var parameters =
                     new Parameters()
-                            .AddUsername(username)
-                            .AddRequestIdBasedOnUtcTime();
+                            .AddUsername(username)  // Specify username.
+                            .AddRequestId("1");     // Specify unique request ID.        
                 var request =
                     api.GetAsync(
                         path,
                         parameters,
                         new Token(token));
-                var result = await request.Deserialize();
+                var result =
+                    await request.Deserialize();
                 Console.WriteLine(
-                    string.Join(Environment.NewLine, result.Companies.Select(x => x.FullName)));
+                    string.Join(
+                        Environment.NewLine,
+                        result.Companies.Select(x => x.FullName)));
+            }
+
+            // Get list of documents (document.list operation)
+            {
+                var path =
+                    Paths.DocumentList.Version21;
+                var parameters =
+                    new Parameters()
+                        .AddUsername(username)                  // Specify username.
+                        .AddRequestIdBasedOnUtcTime()           // Generate request ID based on current time.
+                        .AddCompanyProgramId("your company")    // Specify name of the company.
+                        .AddPolicy("LAST_10_DAYS");             // Specify policy.
+                var request =
+                    api.GetAsync(
+                        path,
+                        parameters,
+                        new Token(token));
+                var result =
+                    await request.Deserialize();
             }
         }
     }
