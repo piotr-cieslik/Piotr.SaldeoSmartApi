@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Piotr Cieslik</Authors>
+    <Company>Piotr Cieslik</Company>
+    <Description>.NET wrapper for SaldeoSMART API</Description>
+    <PackageProjectUrl>https://github.com/piotr-cieslik/Piotr.SaldeoSmartApi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/piotr-cieslik/Piotr.SaldeoSmartApi</RepositoryUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageTags>API Saldeo SaldeoSMART</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
