@@ -58,7 +58,7 @@ var api = new Api(server);
 var path =
     Paths.DocumentDimensionMerge.Version0;
 var request =
-    new Root
+    new Request
     {
         DocumentDimensions = new[]
         {

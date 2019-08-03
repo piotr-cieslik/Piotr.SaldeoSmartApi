@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="root">Root element of the request.</param>
         /// <returns>Base64 string ready to send as command parameter.</returns>
-        public static Base64String Serialize(this DataStructures.Root root)
+        public static Base64String Serialize(this DataStructures.Request root)
         {
             var serializer = new XmlSerializer();
             var xml = serializer.Serialize(root);

@@ -4,9 +4,9 @@ namespace Piotr.SaldeoSmartApi.Serialization
 {
     public sealed class XmlSerializer
     {
-        public string Serialize(DataStructures.Root root)
+        public string Serialize(DataStructures.Request root)
         {
-            var serializer = new System.Xml.Serialization.XmlSerializer(typeof(DataStructures.Root));
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof(DataStructures.Request));
             using (var stringWriter = new Utf8StringWriter())
             {
                 serializer.Serialize(stringWriter, root);

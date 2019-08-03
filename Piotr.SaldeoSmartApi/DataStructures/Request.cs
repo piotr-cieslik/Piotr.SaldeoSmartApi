@@ -3,7 +3,7 @@
 namespace Piotr.SaldeoSmartApi.DataStructures
 {
     [XmlRoot("ROOT")]
-    public sealed class Root
+    public sealed class Request
     {
         [XmlArray("COMPANIES")]
         [XmlArrayItem("COMPANY")]
