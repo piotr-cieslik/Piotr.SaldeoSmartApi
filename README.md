@@ -22,7 +22,6 @@ var server = new Uri("https://saldeo.brainshare.pl");
 // Create an instance of the API.
 var api = new Api(server);
 
-// Get list of companies (company.list operation).
 var path =
 	Paths.CompanyList.Version0;
 var parameters =
@@ -44,6 +43,18 @@ Console.WriteLine(
 
 ## Merge dimensions of document
 ``` csharp
+// Specify your username.
+var username = Environment.GetEnvironmentVariable("SaldeoSmartUsername");
+
+// Specify your token.
+var token = Environment.GetEnvironmentVariable("SaldeoSmartToken");
+
+// Specify the server address.
+var server = new Uri("https://saldeo.brainshare.pl");
+
+// Create an instance of the API.
+var api = new Api(server);
+
 var path =
     Paths.DocumentDimensionMerge.Version0;
 var request =
