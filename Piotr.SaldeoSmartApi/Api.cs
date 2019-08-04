@@ -8,6 +8,7 @@ using Piotr.SaldeoSmartApi.Internal;
 namespace Piotr.SaldeoSmartApi
 {
     public sealed class Api
+        : IDisposable
     {
         private readonly HttpClient _httpClient;
 
@@ -63,5 +64,7 @@ namespace Piotr.SaldeoSmartApi
                 new FormUrlEncodedContent(Enumerable.Empty<KeyValuePair<string, string>>());
             return await _httpClient.PostAsync(url, content);
         }
+
+        public void Dispose() => _httpClient.Dispose();
     }
 }
