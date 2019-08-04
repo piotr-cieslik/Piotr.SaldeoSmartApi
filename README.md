@@ -6,12 +6,12 @@ Unofficial .net wrapper for SaldeoSMART API (https://www.saldeosmart.pl). The li
 
 The library was created based on documentation 3.0.22, from 25.03.2019.
 
-Before you start using it, please make sure you have valid username and token. All operations requires same chunks of information:
+Before using it, please make sure you have valid username and token. All operations requires same chunks of information:
 - operation path,
 - key-value pair of parameters,
 - token.
 
-## Get list of documents
+## Example: get list of documents
 ``` csharp
 // Specify your username.
 var username = Environment.GetEnvironmentVariable("SaldeoSmartUsername");
@@ -44,7 +44,7 @@ Console.WriteLine(
         result.Companies.Select(x => x.FullName)));
 ```
 
-## Merge dimensions of document
+## Example: merge dimensions of document
 ``` csharp
 // Specify your username.
 var username = Environment.GetEnvironmentVariable("SaldeoSmartUsername");
@@ -93,3 +93,18 @@ var response =
 var result =
     await response.Deserialize();           // Deserialize response into Response type.
 ```
+
+## Parameters
+The class `Parameters` represent key-value pair, immutable dictionary that holds information specified by operation. It's very simple type that contains single method `Add(string key, string value)`. To make it easier to use, there is plenty of predefined extension method like `AddUsername(string value)` or `AddRequestId(string value)`. Feel free to define you own extension methods for missing parameters.
+
+You can define parameter name explicity:
+``` csharp
+var parameters = new Parameters().Add("username", "piotr");
+```
+
+or use one of the extension methods:
+``` csharp
+var parameters = new Parameters().AddUsername("piotr");
+```
+
+The only parameter you **shouldn't define** is `req_sig`. It's calculated and added to request automatically when sending. 
