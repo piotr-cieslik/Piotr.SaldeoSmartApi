@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,6 +10,7 @@
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageTags>API Saldeo SaldeoSMART</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
