@@ -12,10 +12,15 @@ namespace Piotr.SaldeoSmartApi
         private readonly HttpClient _httpClient;
 
         public Api(Uri server)
+            : this(server, new HttpClient())
+        {
+        }
+
+        internal Api(Uri server, HttpClient httpClient)
         {
             // HttpClient is intended to be instantiated once per application, rather than per-use. See Remarks.
             // https://docs.microsoft.com/pl-pl/dotnet/api/system.net.http.httpclient?view=netcore-2.2
-            _httpClient = new HttpClient();
+            _httpClient = httpClient;
             _httpClient.BaseAddress = server;
         }
 
