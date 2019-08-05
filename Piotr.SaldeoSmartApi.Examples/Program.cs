@@ -27,8 +27,8 @@ namespace Piotr.SaldeoSmartApi.Examples
                 var path = Paths.CompanyList.Version0;
                 var parameters =
                     new Parameters()
-                        .AddUsername(username)  // Specify username.
-                        .AddRequestId("1");     // Specify unique request ID.        
+                        .AddUsername(username)                  // Specify username.
+                        .AddRequestIdBasedOnUtcTime();          // Specify unique request ID.        
                 var request =
                     api.GetAsync(
                         path,
