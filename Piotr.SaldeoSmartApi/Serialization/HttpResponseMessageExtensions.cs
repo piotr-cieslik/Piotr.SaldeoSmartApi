@@ -8,8 +8,7 @@ namespace Piotr.SaldeoSmartApi.Serialization
         public static async Task<DataStructures.Response> Deserialize(this Task<HttpResponseMessage> response)
         {
             var content = await (await response).Content.ReadAsStringAsync();
-            var serializer = new XmlSerializer();
-            return serializer.Deserialize(content);
+            return content.Deserialize();
         }
     }
 }
