@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Piotr.SaldeoSmartApi.Internal
+namespace Piotr.SaldeoSmartApi
 {
     internal sealed class QueryString
     {

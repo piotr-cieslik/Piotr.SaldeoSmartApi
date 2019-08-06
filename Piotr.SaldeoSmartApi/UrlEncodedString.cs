@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Piotr.SaldeoSmartApi.Internal
+namespace Piotr.SaldeoSmartApi
 {
     /// <summary>
     /// Wrapper over HttpUtility.UrlEncode method, that ensures same encoding standard as used by SaldeSMART.

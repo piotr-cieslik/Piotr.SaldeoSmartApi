@@ -1,7 +1,6 @@
-﻿using Piotr.SaldeoSmartApi.Internal;
-using Xunit;
+﻿using Xunit;
 
-namespace Piotr.SaldeoSmartApi.Tests.Internal
+namespace Piotr.SaldeoSmartApi.Tests
 {
     public sealed class UrlEncodedStringTests
     {

@@ -1,7 +1,6 @@
-﻿using Piotr.SaldeoSmartApi.Internal;
-using Xunit;
+﻿using Xunit;
 
-namespace Piotr.SaldeoSmartApi.Tests.Internal
+namespace Piotr.SaldeoSmartApi.Tests
 {
     /// <summary>
     /// Expected results taken from http://www.miraclesalad.com/webtools/md5.php

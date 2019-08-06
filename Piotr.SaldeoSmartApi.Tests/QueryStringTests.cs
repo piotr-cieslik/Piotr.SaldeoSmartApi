@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using Piotr.SaldeoSmartApi.Internal;
 using Xunit;
 
-namespace Piotr.SaldeoSmartApi.Tests.Internal
+namespace Piotr.SaldeoSmartApi.Tests
 {
     public sealed class QueryStringTests
     {

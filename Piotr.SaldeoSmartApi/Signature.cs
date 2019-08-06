@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace Piotr.SaldeoSmartApi.Internal
+namespace Piotr.SaldeoSmartApi
 {
     internal sealed class Signature
     {
