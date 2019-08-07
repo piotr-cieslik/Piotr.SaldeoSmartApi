@@ -110,3 +110,13 @@ var parameters = new Parameters().AddUsername("piotr");
 ```
 
 The only parameter you **shouldn't define** is `req_sig`. It's calculated and added to request automatically when sending. 
+
+The predefined parameters are:
+- `AddCommand(..)`
+- `AddCompanyProgramId(..)`
+- `AddPolicy(..)`
+- `AddRequestId(..)`
+- `AddRequestIdBasedOnUtcTime()`
+- `AddRequestSignature(..)`
+- `AddUsername(..)`
+
