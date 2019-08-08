@@ -9,6 +9,7 @@ namespace Piotr.SaldeoSmartApi
     public sealed class Api
         : IDisposable
     {
+        private readonly Uri _server;
         private readonly HttpClient _httpClient;
 
         public Api(Uri server)
@@ -21,7 +22,7 @@ namespace Piotr.SaldeoSmartApi
             // HttpClient is intended to be instantiated once per application, rather than per-use. See Remarks.
             // https://docs.microsoft.com/pl-pl/dotnet/api/system.net.http.httpclient?view=netcore-2.2
             _httpClient = httpClient;
-            _httpClient.BaseAddress = server;
+            _server = server;
         }
 
         /// <summary>
@@ -39,7 +40,7 @@ namespace Piotr.SaldeoSmartApi
             var signedQueryString =
                 new QueryString(parameters.AddRequestSignature(signature));
             var url =
-                operationPath + signedQueryString;
+                Url(operationPath, signedQueryString);
             return await _httpClient.GetAsync(url);
         }
 
@@ -58,12 +59,14 @@ namespace Piotr.SaldeoSmartApi
             var signedQueryString =
                 new QueryString(parameters.AddRequestSignature(signature));
             var url =
-                operationPath + signedQueryString;
+                Url(operationPath, signedQueryString);
             var content =
                 new FormUrlEncodedContent(Enumerable.Empty<KeyValuePair<string, string>>());
             return await _httpClient.PostAsync(url, content);
         }
 
         public void Dispose() => _httpClient.Dispose();
+
+        private string Url(string operationPath, QueryString queryString) => $"{_server.ToString().TrimEnd('/')}/{operationPath.TrimStart('/')}{queryString}";
     }
 }

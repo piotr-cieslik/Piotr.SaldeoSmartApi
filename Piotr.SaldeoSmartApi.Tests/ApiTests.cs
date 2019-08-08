@@ -58,6 +58,17 @@ namespace Piotr.SaldeoSmartApi.Tests
         }
 
         [Fact]
+        public async Task GetRequestShouldCorrectMergeServerAndPath()
+        {
+            await _api.GetAsync(
+                Path(),
+                new Parameters(),
+                Token());
+            // It's important that address doesn't contain doubled slash like "//api"
+            Assert.Contains("https://192.168.0.1/api", _fakeHttpHandler.Uri.ToString());
+        }
+
+        [Fact]
         public async Task PostRequestShouldContainQueryString()
         {
             // Given
@@ -108,6 +119,19 @@ namespace Piotr.SaldeoSmartApi.Tests
             // Then
             Assert.Empty(await _fakeHttpHandler.HttpContent.ReadAsByteArrayAsync());
         }
+
+        [Fact]
+        public async Task PostRequestShouldCorrectMergeServerAndPath()
+        {
+            await _api.PostAsync(
+                Path(),
+                new Parameters(),
+                Token());
+            // It's important that address doesn't contain doubled slash like "//api"
+            Assert.Contains("https://192.168.0.1/api", _fakeHttpHandler.Uri.ToString());
+        }
+
+
 
         private string Path() => "/api/xml/1.0/operation";
 
