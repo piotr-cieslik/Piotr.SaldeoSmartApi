@@ -18,4 +18,10 @@
     <ProjectReference Include="..\Piotr.SaldeoSmartApi\Piotr.SaldeoSmartApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DeserializationOfResponseOfDocumentListV21TestsData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

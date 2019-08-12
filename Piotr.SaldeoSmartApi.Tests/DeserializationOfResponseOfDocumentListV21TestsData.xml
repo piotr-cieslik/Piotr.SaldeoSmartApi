@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?><RESPONSE>
+  <METAINF>
+    <PRODUCER>SALDEO</PRODUCER>
+    <TIMESTAMP>2015-10-07 11:16:30.849</TIMESTAMP>
+    <OPERATION>document.list</OPERATION>
+    <VERSION>1.21</VERSION>
+    <PARAMETERS>
+      <PARAMETER>
+        <NAME>req_id</NAME>
+        <VALUE>20151007111616</VALUE>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>company_program_id</NAME>
+        <VALUE>abc.1</VALUE>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>username</NAME>
+        <VALUE>bk</VALUE>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>policy</NAME>
+        <VALUE>SALDEO</VALUE>
+      </PARAMETER>
+    </PARAMETERS>
+  </METAINF>
+  <STATUS>OK</STATUS>
+  <ARTICLES>
+    <ARTICLE>
+      <ARTICLE_ID>2</ARTICLE_ID>
+      <ARTICLE_PROGRAM_ID>programId201</ARTICLE_PROGRAM_ID>
+      <CODE>34567891</CODE>
+      <NAME>Kabel zasilający do dysków modelx/2x</NAME>
+      <UNIT>szt.</UNIT>
+      <PKWIU>12145859</PKWIU>
+      <FOR_INVOICES>true</FOR_INVOICES>
+      <FOR_DOCUMENTS>true</FOR_DOCUMENTS>
+      <FOREIGN_CODES>
+        <FOREIGN_CODE>
+          <CONTRACTOR_ID>200</CONTRACTOR_ID>
+          <CODE>12145859</CODE>
+        </FOREIGN_CODE>
+      </FOREIGN_CODES>
+    </ARTICLE>
+    <ARTICLE>
+      <ARTICLE_ID>11</ARTICLE_ID>
+      <ARTICLE_PROGRAM_ID>programId181</ARTICLE_PROGRAM_ID>
+      <CODE>48962173</CODE>
+      <NAME>Towar numer 1</NAME>
+      <UNIT>szt.</UNIT>
+      <PKWIU>15975346</PKWIU>
+      <FOR_INVOICES>true</FOR_INVOICES>
+      <FOR_DOCUMENTS>true</FOR_DOCUMENTS>
+      <FOREIGN_CODES>
+        <FOREIGN_CODE>
+          <CONTRACTOR_ID>200</CONTRACTOR_ID>
+          <CODE>48962173</CODE>
+        </FOREIGN_CODE>
+      </FOREIGN_CODES>
+    </ARTICLE>
+  </ARTICLES>
+  <CONTRACTORS>
+    <CONTRACTOR>
+      <CONTRACTOR_ID>200</CONTRACTOR_ID>
+      <SHORT_NAME>ORLEN</SHORT_NAME>
+      <FULL_NAME>Orlen Sp. z o.o.</FULL_NAME>
+      <SUPPLIER>true</SUPPLIER>
+      <CUSTOMER>false</CUSTOMER>
+      <CITY>Płock</CITY>
+      <POSTCODE>00-000</POSTCODE>
+      <STREET>Chemików 7</STREET>
+      <COUNTRY_ISO3166A2>PL</COUNTRY_ISO3166A2>
+    </CONTRACTOR>
+  </CONTRACTORS>
+  <DOCUMENTS>
+    <DOCUMENT>
+      <DOCUMENT_ID>50050</DOCUMENT_ID>
+      <NUMBER>FV/0999/2016</NUMBER>
+      <ISSUE_DATE>2015-10-07</ISSUE_DATE>
+      <SALE_DATE>2015-10-07</SALE_DATE>
+      <PAYMENT_DATE>2015-10-07</PAYMENT_DATE>
+      <RECEIVE_DATE>2015-10-07</RECEIVE_DATE>
+      <DOCUMENT_TYPE>
+        <ID>56</ID>
+        <NAME>Faktura kosztowa</NAME>
+        <SHORT_NAME>FK</SHORT_NAME>
+        <TYPE>INVOICE_COST</TYPE>
+      </DOCUMENT_TYPE>
+      <CLASSIFICATION>INVOICE</CLASSIFICATION>
+      <CONTRACTOR>
+        <CONTRACTOR_ID>200</CONTRACTOR_ID>
+      </CONTRACTOR>
+      <FOLDER>
+        <MONTH>10</MONTH>
+        <YEAR>2015</YEAR>
+      </FOLDER>
+      <SUM>492.00</SUM>
+      <VAT_REGISTRIES>
+        <VAT_REGISTRY>
+          <RATE>23</RATE>
+          <NETTO>400.00</NETTO>
+          <VAT>92.00</VAT>
+        </VAT_REGISTRY>
+      </VAT_REGISTRIES>
+      <ITEMS>
+        <ITEM>
+          <EXTRACTION>true</EXTRACTION>
+          <RATE>23</RATE>
+          <NETTO>100.00</NETTO>
+          <VAT>23.00</VAT>
+          <DIMENSIONS>
+            <DIMENSION>
+              <CODE>C</CODE>
+              <NAME>Wymiar C</NAME>
+              <TYPE>ENUM</TYPE>
+              <ADDITIONAL_CODE>KOD1</ADDITIONAL_CODE>
+              <DIMENSION_VALUES>
+                <DIMENSION_VALUE>
+                  <CODE>C1</CODE>
+                  <DESCRIPTION>Wartość C1</DESCRIPTION>
+                  <VALUE>1</VALUE>
+                </DIMENSION_VALUE>
+                <DIMENSION_VALUE>
+                  <CODE>C2</CODE>
+                  <DESCRIPTION>Wartość C2</DESCRIPTION>
+                  <VALUE>2</VALUE>
+                </DIMENSION_VALUE>
+              </DIMENSION_VALUES>
+            </DIMENSION>
+            <DIMENSION>
+              <CODE>D</CODE>
+              <NAME>Wymiar D</NAME>
+              <TYPE>NUM</TYPE>
+              <ADDITIONAL_CODE>KOD1</ADDITIONAL_CODE>
+              <DIMENSION_VALUES>
+                <DIMENSION_VALUE>
+                  <VALUE>wartość d1</VALUE>
+                </DIMENSION_VALUE>
+              </DIMENSION_VALUES>
+            </DIMENSION>
+            <DIMENSION>
+              <CODE>G</CODE>
+              <NAME>Wymiar G</NAME>
+              <TYPE>ENUM</TYPE>
+              <DIMENSION_VALUES>
+                <DIMENSION_VALUE>
+                  <CODE>G1</CODE>
+                  <DESCRIPTION>Wartość G1</DESCRIPTION>
+                  <VALUE>1</VALUE>
+                </DIMENSION_VALUE>
+                <DIMENSION_VALUE>
+                  <CODE>G2</CODE>
+                  <DESCRIPTION>Wartość G2</DESCRIPTION>
+                  <VALUE>2</VALUE>
+                </DIMENSION_VALUE>
+              </DIMENSION_VALUES>
+            </DIMENSION>
+          </DIMENSIONS>
+        </ITEM>
+        <ITEM>
+          <RATE>23</RATE>
+          <NETTO>300.00</NETTO>
+          <VAT>69.00</VAT>
+          <DIMENSIONS>
+            <DIMENSION>
+              <CODE>F</CODE>
+              <NAME>Wymiar F</NAME>
+              <TYPE>ENUM</TYPE>
+              <DIMENSION_VALUES>
+                <DIMENSION_VALUE>
+                  <CODE>F1</CODE>
+                  <DESCRIPTION>Wartość F1</DESCRIPTION>
+                  <VALUE>1</VALUE>
+                </DIMENSION_VALUE>
+                <DIMENSION_VALUE>
+                  <CODE>F2</CODE>
+                  <DESCRIPTION>Wartość F2</DESCRIPTION>
+                  <VALUE>2</VALUE>
+                </DIMENSION_VALUE>
+              </DIMENSION_VALUES>
+            </DIMENSION>
+          </DIMENSIONS>
+        </ITEM>
+      </ITEMS>
+      <CURRENCY_ISO4217>PLN</CURRENCY_ISO4217>
+      <PAYMENT_TYPE>CASH</PAYMENT_TYPE>
+      <STAGE>Nowy</STAGE>
+      <SOURCE>/docs/5050/201510/c586091face88789eecaf306e75d52b7/fv_20151005105618.pdf</SOURCE>
+      <DIMENSIONS>
+        <DIMENSION>
+          <CODE>B</CODE>
+          <NAME>Wymiar B</NAME>
+          <TYPE>NUM</TYPE>
+          <ADDITIONAL_CODE>KOD1</ADDITIONAL_CODE>
+          <DIMENSION_VALUES>
+            <DIMENSION_VALUE>
+              <VALUE>wartość b1</VALUE>
+            </DIMENSION_VALUE>
+          </DIMENSION_VALUES>
+        </DIMENSION>
+        <DIMENSION>
+          <CODE>A</CODE>
+          <NAME>Wymiar A</NAME>
+          <TYPE>ENUM</TYPE>
+          <DIMENSION_VALUES>
+            <DIMENSION_VALUE>
+              <CODE>A1</CODE>
+              <DESCRIPTION>Wartość A1</DESCRIPTION>
+              <VALUE>1</VALUE>
+            </DIMENSION_VALUE>
+          </DIMENSION_VALUES>
+        </DIMENSION>
+        <DIMENSION>
+          <CODE>E</CODE>
+          <NAME>Wymiar E</NAME>
+          <TYPE>ENUM</TYPE>
+          <ADDITIONAL_CODE>KOD1</ADDITIONAL_CODE>
+          <DIMENSION_VALUES>
+            <DIMENSION_VALUE>
+              <CODE>E1</CODE>
+              <DESCRIPTION>Wartość E1</DESCRIPTION>
+              <VALUE>1</VALUE>
+            </DIMENSION_VALUE>
+            <DIMENSION_VALUE>
+              <CODE>E2</CODE>
+              <DESCRIPTION>Wartość E2</DESCRIPTION>
+              <VALUE>2</VALUE>
+            </DIMENSION_VALUE>
+          </DIMENSION_VALUES>
+        </DIMENSION>
+        <DIMENSION>
+          <CODE>KZ</CODE>
+          <NAME>Kwota zatrzymana</NAME>
+          <TYPE>AMOUNT</TYPE>
+          <DIMENSION_VALUES>
+            <DIMENSION_VALUE>
+              <VALUE>1000.0000</VALUE>
+            </DIMENSION_VALUE>
+          </DIMENSION_VALUES>
+        </DIMENSION>
+      </DIMENSIONS>
+      <SALDEO_SYNC_DOCUMENTS>
+        <SALDEO_SYNC_DOCUMENT>
+          <ID>1</ID>
+          <GUID>123456789</GUID>
+          <DESCRIPTION>test2</DESCRIPTION>
+          <NUMBERING_TYPE>test</NUMBERING_TYPE>
+          <ACCOUNT_DOCUMENT_NUMBER>test</ACCOUNT_DOCUMENT_NUMBER>
+          <DOCUMENT_STATUS>BUFFER</DOCUMENT_STATUS>
+        </SALDEO_SYNC_DOCUMENT>
+      </SALDEO_SYNC_DOCUMENTS>
+      <ATTACHMENTS>
+        <ATTACHMENT>
+          <ATTACHMENT_ID>100</ATTACHMENT_ID>
+          <CREATE_DATE>2015-12-08</CREATE_DATE>
+          <DESCRIPTION>załącznik1</DESCRIPTION>
+          <FILENAME>1.pdf</FILENAME>
+          <SOURCE>/docs/attachments/201512/08/0810/51792f3bcbace8e05c2f99f729e5dee9/1.pdf</SOURCE>
+        </ATTACHMENT>
+        <ATTACHMENT>
+          <ATTACHMENT_ID>101</ATTACHMENT_ID>
+          <CREATE_DATE>2015-12-08</CREATE_DATE>
+          <FILENAME>faktura_h_0370_14.pdf</FILENAME>
+          <SOURCE>/docs/attachments/201512/08/0822/51792f3bcbace8e05c2f99f729e5dee9/faktura_h_0370_14.pdf</SOURCE>
+        </ATTACHMENT>
+      </ATTACHMENTS>
+      <DOCUMENT_ITEMS>
+        <DOCUMENT_ITEM>
+          <ARTICLE_ID>2</ARTICLE_ID>
+          <CODE>34567891</CODE>
+          <NAME>Kabel zasilający do dysków modelx/2x</NAME>
+          <AMOUNT>1</AMOUNT>
+          <UNIT>szt.</UNIT>
+          <RATE>23</RATE>
+          <UNIT_VALUE>72.200000</UNIT_VALUE>
+          <NETTO>72.20</NETTO>
+          <VAT>16.61</VAT>
+          <GROSS>88.81</GROSS>
+        </DOCUMENT_ITEM>
+        <DOCUMENT_ITEM>
+          <ARTICLE_ID>11</ARTICLE_ID>
+          <CODE>48962173</CODE>
+          <NAME>Towar numer 1</NAME>
+          <AMOUNT>1</AMOUNT>
+          <UNIT>szt.</UNIT>
+          <RATE>0</RATE>
+          <UNIT_VALUE>1.800000</UNIT_VALUE>
+          <NETTO>1.80</NETTO>
+          <VAT>0.00</VAT>
+          <GROSS>1.80</GROSS>
+        </DOCUMENT_ITEM>
+      </DOCUMENT_ITEMS>
+      <SEND_BY_USER>login</SEND_BY_USER>
+      <IS_DOCUMENT_PAID>false</IS_DOCUMENT_PAID>
+      <DOCUMENT_PAYMENTS>
+        <DOCUMENT_PAYMENT>
+          <PAYMENT_DATE>2018-03-01</PAYMENT_DATE>
+          <PAYMENT_AMOUNT>50.00</PAYMENT_AMOUNT>
+        </DOCUMENT_PAYMENT>
+        <DOCUMENT_PAYMENT>
+          <PAYMENT_AMOUNT>13.00</PAYMENT_AMOUNT>
+        </DOCUMENT_PAYMENT>
+      </DOCUMENT_PAYMENTS>
+      <IS_DOCUMENT_BELONG_TO_COMPAN>false</IS_DOCUMENT_BELONG_TO_COMPAN>
+    </DOCUMENT>
+  </DOCUMENTS>
+</RESPONSE>
