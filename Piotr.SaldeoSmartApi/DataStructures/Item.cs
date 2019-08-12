@@ -22,6 +22,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("DESCRIPTION")]
         public string Description { get; set; }
 
+        [XmlArray("DIMENSIONS")]
+        [XmlArrayItem("DIMENSION")]
+        public Dimension[] Dimensions { get; set; }
+
         //TODO Figure out what is it.
         //[XmlArray("PROGRAM_PARAMETERS")]
         //public object[] ProgramParameters { get; set; }

@@ -7,6 +7,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("COMPANY_ID")]
         public string CompanyId { get; set; }
 
+        [XmlElement("STATUS")]
+        public string Status { get; set; }
+
         [XmlElement("COMPANY_PROGRAM_ID")]
         public string CompanyProgramId { get; set; }
 
@@ -49,5 +52,8 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArray("BANK_ACCOUNTS")]
         [XmlArrayItem("BANK_ACCOUNT")]
         public BankAccount[] BankAccounts { get; set; }
+
+        [XmlElement("ZUS_BANK_ACCOUNT")]
+        public string ZusBankAccount { get; set; }
     }
 }

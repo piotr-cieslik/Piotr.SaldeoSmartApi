@@ -4,6 +4,19 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 {
     public sealed class Contractor
     {
+        [XmlElement("CONTRACTOR_PROGRAM_ID")]
+        public string ContractorProgramId { get; set; }
+
+        [XmlElement("STATUS")]
+        public string Status { get; set; }
+
+        [XmlElement("STATUS_MESSAGE")]
+        public string StatusMessage { get; set; }
+
+        [XmlArray("ERRORS")]
+        [XmlArrayItem("ERROR")]
+        public Error[] Errors { get; set; }
+
         [XmlElement("CONTRACTOR_ID")]
         public string ContractorId { get; set; }
 
@@ -31,6 +44,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("STREET")]
         public string Street { get; set; }
 
+        [XmlElement("COUNTRY_ISO3166A2")]
+        public string CountryISO3166A2 { get; set; }
+
         [XmlArray("EMAILS")]
         [XmlArrayItem("EMAIL")]
         public string[] Emails { get; set; }
@@ -50,5 +66,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArray("BANK_ACCOUNTS")]
         [XmlArrayItem("BANK_ACCOUNT")]
         public BankAccount[] BankAccounts { get; set; }
+
+        //TODO Figure out what is it.
+        //[XmlArray("PROGRAM_PARAMETERS")]
+        //public object[] ProgramParameters { get; set; }
     }
 }

@@ -23,6 +23,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("RECEIVE_DATE")]
         public DateTime? ReceiveDate { get; set; }
 
+        [XmlElement("DOCUMENT_TYPE")]
+        public DocumentType DocumentType { get; set; }
+
         [XmlElement("TYPE")]
         public string Type { get; set; }
 
@@ -115,7 +118,7 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         public DateTime? ArchivizationDate { get; set; }
 
         [XmlElement("PAGE_COUNT")]
-        public int PageCount { get; set; }
+        public int? PageCount { get; set; }
 
         [XmlArray("PREVIEWS")]
         [XmlArrayItem("PREVIEW_URL")]
@@ -127,6 +130,31 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArray("DIMENSIONS")]
         [XmlArrayItem("DIMENSION")]
         public Dimension[] Dimensions { get; set; }
+
+        [XmlArray("SALDEO_SYNC_DOCUMENTS")]
+        [XmlArrayItem("SALDEO_SYNC_DOCUMENT")]
+        public SaldeoSyncDocument[] SaldeoSyncDocuments { get; set; }
+
+        [XmlElement("SEND_BY_USER")]
+        public string SendByUser { get; set; }
+
+        [XmlElement("IS_DOCUMENT_PAID")]
+        public bool? IsDocumentPaid { get; set; }
+
+        [XmlElement("IS_DOCUMENT_BELONG_TO_COMPANY")]
+        public bool? IsDocumentBelongToCompany { get; set; }
+
+        [XmlArray("DOCUMENT_PAYMENTS")]
+        [XmlArrayItem("DOCUMENT_PAYMENT")]
+        public DocumentPayment[] DocumentPayments { get; set; }
+
+        [XmlArray("ATTACHMENTS")]
+        [XmlArrayItem("ATTACHMENT")]
+        public Attachment[] Attachments { get; set; }
+
+        [XmlArray("DOCUMENT_ITEMS")]
+        [XmlArrayItem("DOCUMENT_ITEM")]
+        public DocumentItem[] DocumentItems { get; set; }
 
         //TODO Figure out what is it.
         //[XmlArray("PROGRAM_PARAMETERS")]

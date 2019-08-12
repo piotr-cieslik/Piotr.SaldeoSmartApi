@@ -9,5 +9,11 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 
         [XmlElement("NAME")]
         public string Name { get; set; }
+
+        [XmlElement("BANK_NAME")]
+        public string BankName { get; set; }
+
+        [XmlElement("BIC_NUMBER")]
+        public string BicNumber { get; set; }
     }
 }

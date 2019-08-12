@@ -32,5 +32,15 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArray("DOCUMENTS")]
         [XmlArrayItem("DOCUMENT")]
         public Document[] Documents { get; set; }
+
+        [XmlElement("RESULTS")]
+        public Results Results { get; set; }
+
+        [XmlArray("ARTICLES")]
+        [XmlArrayItem("ARTICLE")]
+        public Article[] Articles { get; set; }
+
+        [XmlElement("WALLET")]
+        public Wallet Wallet { get; set; }
     }
 }
