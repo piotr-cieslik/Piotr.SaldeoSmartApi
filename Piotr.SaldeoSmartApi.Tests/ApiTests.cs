@@ -28,7 +28,7 @@ namespace Piotr.SaldeoSmartApi.Tests
                 new Parameters()
                     .AddUsername("user")
                     .AddRequestId("1");
-            
+
             // When
             await _api.GetAsync(
                 Path(),
@@ -131,8 +131,6 @@ namespace Piotr.SaldeoSmartApi.Tests
             Assert.Contains("https://192.168.0.1/api", _fakeHttpHandler.Uri.ToString());
         }
 
-
-
         private string Path() => "/api/xml/1.0/operation";
 
         private Token Token() => new Token("1234");
@@ -157,7 +155,7 @@ namespace Piotr.SaldeoSmartApi.Tests
 
             public Uri Uri { get; private set; }
 
-            public HttpContent HttpContent  { get; private set; }
+            public HttpContent HttpContent { get; private set; }
         }
     }
 
