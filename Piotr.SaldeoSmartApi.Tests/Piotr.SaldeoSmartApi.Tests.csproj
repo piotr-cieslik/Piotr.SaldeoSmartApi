@@ -22,6 +22,9 @@
     <None Update="DeserializationOfResponseOfDocumentListV21TestsData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="DeserializationOfResponseOfDocumentSearchV21TestsData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
