@@ -11,7 +11,16 @@
     <PackageTags>API Saldeo SaldeoSMART</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Version>0.1.1</Version>
+    <CodeAnalysisRuleSet>Ruleset.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE">
@@ -21,6 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
   </ItemGroup>
 

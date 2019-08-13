@@ -18,6 +18,7 @@ namespace Piotr.SaldeoSmartApi
             {
                 builder.Append(hash[i].ToString("X2"));
             }
+
             return builder.ToString();
         }
 

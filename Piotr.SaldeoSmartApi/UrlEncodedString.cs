@@ -13,7 +13,7 @@ namespace Piotr.SaldeoSmartApi
 
         public static implicit operator string(UrlEncodedString x) => x.ToString();
 
-        public override string ToString() => string.Join("", EncodeCharacters());
+        public override string ToString() => string.Join(string.Empty, EncodeCharacters());
 
         private IEnumerable<string> EncodeCharacters()
         {

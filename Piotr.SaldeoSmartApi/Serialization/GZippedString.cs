@@ -6,7 +6,7 @@ namespace Piotr.SaldeoSmartApi.Serialization
 {
     /// <summary>
     /// Wrapper that takes string as input parameter (by constructor),
-    /// performs gZip compression and return compressed string as array of bytes. 
+    /// performs gZip compression and return compressed string as array of bytes.
     /// </summary>
     public sealed class GZippedString
     {
@@ -26,6 +26,7 @@ namespace Piotr.SaldeoSmartApi.Serialization
                     {
                         sourceStream.CopyTo(gZipStream);
                     }
+
                     return targetStream.ToArray();
                 }
             }

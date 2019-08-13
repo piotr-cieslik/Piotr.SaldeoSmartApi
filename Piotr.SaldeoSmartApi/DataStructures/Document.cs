@@ -156,8 +156,8 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DOCUMENT_ITEM")]
         public DocumentItem[] DocumentItems { get; set; }
 
-        //TODO Figure out what is it.
-        //[XmlArray("PROGRAM_PARAMETERS")]
-        //public object[] ProgramParameters { get; set; }
+        // TODO Figure out what is it.
+        // [XmlArray("PROGRAM_PARAMETERS")]
+        // public object[] ProgramParameters { get; set; }
     }
 }
