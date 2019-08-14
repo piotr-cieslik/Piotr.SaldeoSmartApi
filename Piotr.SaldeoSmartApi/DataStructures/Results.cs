@@ -15,5 +15,8 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 
         [XmlElement("DOCUMENT")]
         public Document Document { get; set; }
+
+        [XmlElement("REGISTER")]
+        public Register Register { get; set; }
     }
 }
