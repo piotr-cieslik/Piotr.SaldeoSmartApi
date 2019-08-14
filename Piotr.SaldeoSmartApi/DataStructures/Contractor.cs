@@ -27,10 +27,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         public string FullName { get; set; }
 
         [XmlElement("SUPPLIER")]
-        public bool Supplier { get; set; }
+        public bool Supplier { get; set; } // TODO make it optional
 
         [XmlElement("CUSTOMER")]
-        public bool Customer { get; set; }
+        public bool Customer { get; set; } // TODO make it optional
 
         [XmlElement("VAT_NUMBER")]
         public string VatNumber { get; set; }

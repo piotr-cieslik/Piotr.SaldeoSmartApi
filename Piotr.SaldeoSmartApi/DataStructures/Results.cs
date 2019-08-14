@@ -7,6 +7,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("COMPANY")]
         public Company Company { get; set; }
 
+        [XmlElement("CONTRACTOR")]
+        public Contractor Contractor { get; set; }
+
         [XmlElement("DOCUMENT")]
         public Document Document { get; set; }
     }
