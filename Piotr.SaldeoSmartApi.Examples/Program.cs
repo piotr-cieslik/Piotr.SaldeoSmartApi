@@ -98,6 +98,34 @@ namespace Piotr.SaldeoSmartApi.Examples
                 var result =
                     await response.Deserialize();           // Deserialize response into Response type.
             }
+
+            // Search documents (document.search operation)
+            {
+                var path =
+                    Paths.DocumentSearch.Version21;
+                var request =
+                    new Request
+                    {
+                        SearchPolicy = "BY_FIELDS",
+                        Fields = new Fields
+                        {
+                            DocumentId = 123,
+                        },
+                    };
+                var parameters =
+                    new Parameters()
+                        .AddUsername(username)              // Specify username.
+                        .AddCompanyProgramId("company")     // Specify company name.
+                        .AddRequestIdBasedOnUtcTime()       // Generate unique request ID.
+                        .AddCommand(request.Serialize());   // Serialize request as valid XML
+                var response =
+                    api.PostAsync(
+                        path,
+                        parameters,
+                        new Token(token));
+                var result =
+                    await response.Deserialize();           // Deserialize response into Response type.
+            }
         }
     }
 }
