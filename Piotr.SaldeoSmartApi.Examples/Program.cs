@@ -16,6 +16,9 @@ namespace Piotr.SaldeoSmartApi.Examples
             // Specify your token.
             var token = Environment.GetEnvironmentVariable("SaldeoSmartToken");
 
+            // Specify your company program id.
+            var companyProgramId = Environment.GetEnvironmentVariable("SaldeoSmartCompanyProgramId");
+
             // Specify the server address.
             var server = new Uri("https://saldeo.brainshare.pl");
 
@@ -50,7 +53,7 @@ namespace Piotr.SaldeoSmartApi.Examples
                     new Parameters()
                         .AddUsername(username)                  // Specify username.
                         .AddRequestIdBasedOnUtcTime()           // Generate request ID based on current time.
-                        .AddCompanyProgramId("your company")    // Specify name of the company.
+                        .AddCompanyProgramId(companyProgramId)  // Specify name of the company.
                         .AddPolicy("LAST_10_DAYS");             // Specify policy.
                 var request =
                     api.GetAsync(
@@ -72,13 +75,13 @@ namespace Piotr.SaldeoSmartApi.Examples
                         {
                             new DocumentDimension
                             {
-                                DocumentId = 40799538,      // Specify ID of document
+                                DocumentId = 40799538,          // Specify ID of document
                                 Dimensions = new[]
                                 {
                                     new Dimension
                                     {
-                                        Code = "Liters",    // Specify dimension name
-                                        Value = "100",      // Specify value
+                                        Code = "Liters",        // Specify dimension name
+                                        Value = "100",          // Specify value
                                     }
                                 }
                             },
@@ -86,17 +89,17 @@ namespace Piotr.SaldeoSmartApi.Examples
                     };
                 var parameters =
                     new Parameters()
-                        .AddUsername(username)              // Specify username.
-                        .AddCompanyProgramId("company")     // Specify company name.
-                        .AddRequestIdBasedOnUtcTime()       // Generate unique request ID.
-                        .AddCommand(request.Serialize());   // Serialize request as valid XML
+                        .AddUsername(username)                  // Specify username.
+                        .AddCompanyProgramId(companyProgramId)  // Specify company name.
+                        .AddRequestIdBasedOnUtcTime()           // Generate unique request ID.
+                        .AddCommand(request.Serialize());       // Serialize request as valid XML
                 var response =
                     api.PostAsync(
                         path,
                         parameters,
                         new Token(token));
                 var result =
-                    await response.Deserialize();           // Deserialize response into Response type.
+                    await response.Deserialize();               // Deserialize response into Response type.
             }
 
             // Search documents (document.search operation)
@@ -114,17 +117,17 @@ namespace Piotr.SaldeoSmartApi.Examples
                     };
                 var parameters =
                     new Parameters()
-                        .AddUsername(username)              // Specify username.
-                        .AddCompanyProgramId("company")     // Specify company name.
-                        .AddRequestIdBasedOnUtcTime()       // Generate unique request ID.
-                        .AddCommand(request.Serialize());   // Serialize request as valid XML
+                        .AddUsername(username)                  // Specify username.
+                        .AddCompanyProgramId(companyProgramId)  // Specify company name.
+                        .AddRequestIdBasedOnUtcTime()           // Generate unique request ID.
+                        .AddCommand(request.Serialize());       // Serialize request as valid XML
                 var response =
                     api.PostAsync(
                         path,
                         parameters,
                         new Token(token));
                 var result =
-                    await response.Deserialize();           // Deserialize response into Response type.
+                    await response.Deserialize();               // Deserialize response into Response type.
             }
         }
     }
