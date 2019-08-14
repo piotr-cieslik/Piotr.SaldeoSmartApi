@@ -25,6 +25,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("USERNAME")]
         public string Username { get; set; }
 
+        [XmlElement("PASSWORD")]
+        public string Password { get; set; }
+
         [XmlElement("SHORT_NAME")]
         public string ShortName { get; set; }
 
