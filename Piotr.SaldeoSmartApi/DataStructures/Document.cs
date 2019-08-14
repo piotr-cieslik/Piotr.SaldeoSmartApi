@@ -162,6 +162,31 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("ATTMNT_NAME")]
         public string AttmntName { get; set; }
 
+        [XmlElement("SPLIT_MODE")]
+        public string SplitMode { get; set; }
+
+        [XmlElement("NO_ROTATE")]
+        public string NoRotate { get; set; }
+
+        [XmlElement("OVERWRITE_DATA")]
+        public string OverwriteData { get; set; }
+
+        [XmlArray("ERRORS")]
+        [XmlArrayItem("ERROR")]
+        public Error[] Errors { get; set; }
+
+        [XmlElement("OCR_ORIGIN_ID")]
+        public string OcrOriginId { get; set; }
+
+        [XmlElement("COST")]
+        public string Cost { get; set; }
+
+        [XmlElement("SENT_DOCUMENT_COUNT")]
+        public string SentDocumentCount { get; set; }
+
+        [XmlElement("SENT_PAGE_COUNT")]
+        public string SentPageCount { get; set; }
+
         // TODO Figure out what is it.
         // [XmlArray("PROGRAM_PARAMETERS")]
         // public object[] ProgramParameters { get; set; }
