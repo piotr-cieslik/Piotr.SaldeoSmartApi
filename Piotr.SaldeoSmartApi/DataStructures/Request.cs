@@ -15,7 +15,7 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 
         [XmlArray("CONTRACTORS")]
         [XmlArrayItem("CONTRACTOR")]
-        public Contractor[] Contractor { get; set; }
+        public Contractor[] Contractor { get; set; } // TODO Rename to Contractors.
 
         [XmlArray("DIMENSIONS")]
         [XmlArrayItem("DIMENSION")]
