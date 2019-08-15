@@ -13,6 +13,9 @@ Before using it, please make sure you have valid username and token. All operati
 - key-value pair of parameters,
 - token.
 
+## Versioning and breaking changes (important!)
+Before version 1.0.0 I allow myself to introduce breaking changes with each release of new MINOR version (read version number as MAJOR.MINOR.PATCH). I will not introduce breaking changes to new PATCH versions.
+
 ## Example: get list of documents
 ``` csharp
 // Specify your username.
