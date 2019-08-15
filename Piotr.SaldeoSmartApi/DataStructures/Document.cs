@@ -187,6 +187,12 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("SENT_PAGE_COUNT")]
         public string SentPageCount { get; set; }
 
+        [XmlElement("UPDATE_STATUS")]
+        public string UpdateStatus { get; set; }
+
+        [XmlElement("ERROR_MESSAGE")]
+        public string ErrorMessage { get; set; }
+
         // TODO Figure out what is it.
         // [XmlArray("PROGRAM_PARAMETERS")]
         // public object[] ProgramParameters { get; set; }

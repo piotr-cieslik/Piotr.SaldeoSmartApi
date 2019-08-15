@@ -25,6 +25,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DIMENSION")]
         public Dimension[] Dimensions { get; set; }
 
+        [XmlArray("DOCUMENTS")]
+        [XmlArrayItem("DOCUMENT")]
+        public Document[] Documents { get; set; }
+
         [XmlArray("DOCUMENT_DELETE_IDS")]
         [XmlArrayItem("DOCUMENT_DELETE_ID")]
         public int[] DocumentDeleteIds { get; set; }
