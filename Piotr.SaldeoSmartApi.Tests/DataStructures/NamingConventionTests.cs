@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Xml.Serialization;
 using Xunit;
 
@@ -53,6 +54,7 @@ namespace Piotr.SaldeoSmartApi.Tests
         [Theory]
         [InlineData("DOCUMENT", "Document")]
         [InlineData("DOCUMENT_ID", "DocumentId")]
+        [InlineData("COUNTRY_ISO3166A2", "CountryISO3166A2")]
         public void ShouldReturnExpectedPropertyName(string actual, string expected)
         {
             var result = ExpectedPropertyName(actual);
@@ -62,9 +64,18 @@ namespace Piotr.SaldeoSmartApi.Tests
         private string ExpectedPropertyName(string xmlElementName)
         {
             var words = xmlElementName.Split("_");
-            var wordsWithFirstLetterUpercase = words.Select(x => char.ToUpper(x[0]) + x.Substring(1).ToLower());
-            var propertyName = string.Join(string.Empty, wordsWithFirstLetterUpercase);
-            return propertyName;
+            var propertyName = new StringBuilder();
+            foreach(var word in words)
+            {
+                if (word.StartsWith("ISO"))
+                {
+                    propertyName.Append(word);
+                    continue;
+                }
+
+                propertyName.Append(char.ToUpper(word[0]) + word.Substring(1).ToLower());
+            }
+            return propertyName.ToString();
         }
     }
 }
