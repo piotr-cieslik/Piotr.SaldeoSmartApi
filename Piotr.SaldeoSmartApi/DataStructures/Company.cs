@@ -10,6 +10,13 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("STATUS")]
         public string Status { get; set; }
 
+        [XmlElement("STATUS_MESSAGE")]
+        public string StatusMessage { get; set; }
+
+        [XmlArray("ERRORS")]
+        [XmlArrayItem("ERROR")]
+        public Error[] Errors { get; set; }
+
         [XmlElement("COMPANY_PROGRAM_ID")]
         public string CompanyProgramId { get; set; }
 
