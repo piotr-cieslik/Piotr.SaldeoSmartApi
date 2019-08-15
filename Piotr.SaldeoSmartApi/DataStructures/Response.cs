@@ -33,6 +33,11 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DOCUMENT")]
         public Document[] Documents { get; set; }
 
+        // TODO Handle collection of results.
+        // Results may contain more than one element.
+        // The type of elements is dependent on performed operation.
+        // Introduce collections of different results for each operation.
+        // I suggest to name properties like "ResultsOfTypeDocument", "ResultsOfTypeCategory".
         [XmlElement("RESULTS")]
         public Results Results { get; set; }
 
