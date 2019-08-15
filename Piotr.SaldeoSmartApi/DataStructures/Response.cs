@@ -33,6 +33,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DOCUMENT")]
         public Document[] Documents { get; set; }
 
+        [XmlArray("DOCUMENT_DELETES")]
+        [XmlArrayItem("DOCUMENT_DELETE")]
+        public DocumentDelete[] DocumentDeletes { get; set; }
+
         // TODO Handle collection of results.
         // Results may contain more than one element.
         // The type of elements is dependent on performed operation.
