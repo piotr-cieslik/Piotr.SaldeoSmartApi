@@ -6,7 +6,7 @@ namespace Piotr.SaldeoSmartApi.DataStructures
     public sealed class Attachment
     {
         [XmlElement("ATTACHMENT_ID")]
-        public string AttachementId { get; set; }
+        public string AttachmentId { get; set; }
 
         [XmlElement("CREATE_DATE")]
         public DateTime? CreateDate { get; set; }

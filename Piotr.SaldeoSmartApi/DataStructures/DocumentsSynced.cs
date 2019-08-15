@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace Piotr.SaldeoSmartApi.DataStructures
 {
-    public sealed class DocumentSynced
+    public sealed class DocumentsSynced
     {
         [XmlElement("CONTRACTOR_PROGRAM_ID")]
         public string ContractorProgramId { get; set; }

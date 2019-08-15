@@ -143,7 +143,7 @@ namespace Piotr.SaldeoSmartApi.Tests
             string expectedFilename,
             string expectedSource)
         {
-            Assert.Equal(expectedAttachementId, actual.AttachementId);
+            Assert.Equal(expectedAttachementId, actual.AttachmentId);
             Assert.Equal(expectedCreateDate, actual.CreateDate);
             Assert.Equal(expectedDescription, actual.Description);
             Assert.Equal(expectedFilename, actual.Filename);
@@ -202,7 +202,7 @@ namespace Piotr.SaldeoSmartApi.Tests
             Assert.Equal(expectedReceiveDate, actual.ReceiveDate);
             Assert.Equal(expectedClassification, actual.Classification);
             Assert.Equal(expectedSum, actual.Sum);
-            Assert.Equal(expectedCurrencyISO4217, actual.Currency);
+            Assert.Equal(expectedCurrencyISO4217, actual.CurrencyISO4217);
             Assert.Equal(expectedPaymentType, actual.PaymentType);
             Assert.Equal(expectedStage, actual.Stage);
             Assert.Equal(expectedExported, actual.Exported);

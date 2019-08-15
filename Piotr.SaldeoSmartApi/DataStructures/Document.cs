@@ -36,10 +36,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         public string IsCorrective { get; set; }
 
         [XmlElement("CORR_INV_NUM")]
-        public string CorrectiveInvoiceNumber { get; set; } // TODO Rename to CorrInvNum
+        public string CorrInvNum { get; set; }
 
         [XmlElement("CORR_INV_DATE")]
-        public string CorrectiveInvoiceDate { get; set; } // TODO Rename to CorrInvDate
+        public string CorrInvDate { get; set; }
 
         [XmlElement("IS_VAT_MARGIN")]
         public bool? IsVatMargin { get; set; }
@@ -78,10 +78,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         public Item[] Items { get; set; }
 
         [XmlElement("LANG_ISO639_1")]
-        public string Language { get; set; }
+        public string LangISO6391 { get; set; }
 
         [XmlElement("CURRENCY_ISO4217")]
-        public string Currency { get; set; } // TODO Rename to CurrencyISO4217
+        public string CurrencyISO4217 { get; set; }
 
         [XmlElement("CURRENCY_RATE")]
         public string CurrencyRate { get; set; }
