@@ -13,6 +13,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("CONTRACTOR")]
         public Contractor Contractor { get; set; }
 
+        [XmlElement("DESCRIPTION")]
+        public Description Description { get; set; }
+
         [XmlElement("DIMENSION")]
         public Dimension Dimension { get; set; }
 
