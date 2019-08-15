@@ -25,6 +25,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DOCUMENT_DIMENSION")]
         public DocumentDimension[] DocumentDimensions { get; set; }
 
+        [XmlArray("DOCUMENT_SYNCS")]
+        [XmlArrayItem("DOCUMENT_SYNC")]
+        public DocumentSync[] DocumentSyncs { get; set; }
+
         [XmlArray("PAYMENT_METHODS")]
         [XmlArrayItem("PAYMENT_METHOD")]
         public PaymentMethod[] PaymentMethods { get; set; }

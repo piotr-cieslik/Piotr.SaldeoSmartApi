@@ -19,6 +19,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("DOCUMENT")]
         public Document Document { get; set; }
 
+        [XmlElement("DOCUMENTS_SYNCED")]
+        public DocumentSynced DocumentSynced { get; set; }
+
         [XmlElement("PAYMENT_METHOD")]
         public PaymentMethod PaymentMethod { get; set; }
 
