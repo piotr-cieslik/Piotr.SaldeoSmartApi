@@ -5,6 +5,10 @@ namespace Piotr.SaldeoSmartApi.DataStructures
     [XmlRoot("ROOT")]
     public sealed class Request
     {
+        [XmlArray("ARTICLES")]
+        [XmlArrayItem("ARTICLE")]
+        public Article[] Articles { get; set; }
+
         [XmlArray("CATEGORIES")]
         [XmlArrayItem("CATEGORY")]
         public Category[] Categories { get; set; }

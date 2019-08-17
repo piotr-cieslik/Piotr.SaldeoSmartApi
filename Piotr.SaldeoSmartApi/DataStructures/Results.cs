@@ -4,6 +4,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 {
     public sealed class Results
     {
+        [XmlElement("ARTICLE")]
+        public Article Article { get; set; }
+
         [XmlElement("CATEGORY")]
         public Category Category { get; set; }
 

@@ -31,5 +31,17 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArray("FOREIGN_CODES")]
         [XmlArrayItem("FOREIGN_CODE")]
         public ForeignCode[] ForeignCodes { get; set; }
+
+        [XmlElement("STATUS")]
+        public string Status { get; set; }
+
+        [XmlElement("STATUS_MESSAGE")]
+        public string StatusMessage { get; set; }
+
+        [XmlArray("ERRORS")]
+        [XmlArrayItem("ERROR")]
+        public Error[] Errors { get; set; }
+
+        // TODO PROGRAM_PARAMETERS
     }
 }
