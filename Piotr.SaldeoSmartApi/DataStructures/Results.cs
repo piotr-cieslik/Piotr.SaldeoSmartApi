@@ -22,6 +22,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("DOCUMENT")]
         public Document Document { get; set; }
 
+        [XmlElement("DOCUMENT_DIMENSION")]
+        public DocumentDimension DocumentDimension { get; set; }
+
         [XmlElement("DOCUMENTS_SYNCED")]
         public DocumentsSynced DocumentsSynced { get; set; }
 

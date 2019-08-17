@@ -16,5 +16,12 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArray("DIMENSIONS")]
         [XmlArrayItem("DIMENSION")]
         public Dimension[] Dimensions { get; set; }
+
+        [XmlElement("DOCUMENT_DIMENSION_STATUS")]
+        public string DocumentDimensionStatus { get; set; }
+
+        [XmlArray("ERRORS")]
+        [XmlArrayItem("ERROR")]
+        public Error[] Errors { get; set; }
     }
 }
