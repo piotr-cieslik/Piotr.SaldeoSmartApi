@@ -51,5 +51,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 
         [XmlElement("WALLET")]
         public Wallet Wallet { get; set; }
+
+        [XmlArray("BANK_STATEMENTS")]
+        [XmlArrayItem("BANK_STATEMENT")]
+        public BankStatement[] BankStatements { get; set; }
     }
 }

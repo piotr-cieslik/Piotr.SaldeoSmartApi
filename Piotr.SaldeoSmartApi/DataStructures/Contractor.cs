@@ -67,6 +67,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("BANK_ACCOUNT")]
         public BankAccount[] BankAccounts { get; set; }
 
+        [XmlElement("NIP")]
+        public string Nip { get; set; }
+
         // TODO Figure out what is it.
         // [XmlArray("PROGRAM_PARAMETERS")]
         // public object[] ProgramParameters { get; set; }
