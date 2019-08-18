@@ -116,7 +116,7 @@ namespace Piotr.SaldeoSmartApi.Tests
                 expectedSendByUser: "login",
                 expectedIsDocumentPaid: false,
                 expectedIsDocumentBelongToCompany: false);
-            // TODO
+            // TODO Add missing tests
             // For now I skip rest of asserts, the document looks same as
             // document from test checking response of document.list v21.
         }

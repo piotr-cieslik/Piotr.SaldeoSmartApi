@@ -193,8 +193,6 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("ERROR_MESSAGE")]
         public string ErrorMessage { get; set; }
 
-        // TODO Figure out what is it.
-        // [XmlArray("PROGRAM_PARAMETERS")]
-        // public object[] ProgramParameters { get; set; }
+        // TODO PROGRAM_PARAMETERS
     }
 }
