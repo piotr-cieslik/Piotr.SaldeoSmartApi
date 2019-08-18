@@ -20,6 +20,8 @@ Version 0.2.0
 - Rename properties to ensure common naming convention.
 - Make properties `Supplier` and `Customer` of `Contractor` nullable.
 - Remove type `Results`. Now results are returned as array of objects. Added methods that help get results of specified type. Read more about results below.
+- Define new data structures.
+- Define new properties of existing data structures.
 
 ## Example: get list of documents
 ``` csharp
