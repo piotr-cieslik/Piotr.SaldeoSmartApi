@@ -13,8 +13,13 @@ Before using it, please make sure you have valid username and token. All operati
 - key-value pair of parameters,
 - token.
 
-## Versioning and breaking changes (important!)
+## Versioning (important!)
 Before version 1.0.0 I allow myself to introduce breaking changes with each release of new MINOR version (read version number as MAJOR.MINOR.PATCH). I will not introduce breaking changes to new PATCH versions.
+
+Version 0.2.0
+- Rename properties to ensure common naming convention.
+- Make properties `Supplier` and `Customer` of `Contractor` nullable.
+- Remove type `Results`. Now results are returned as array of objects. Added methods that help get results of specified type. Read more about results below.
 
 ## Example: get list of documents
 ``` csharp
@@ -123,3 +128,15 @@ The predefined parameters are:
 - `AddRequestSignature(..)`
 - `AddUsername(..)`
 
+## Results
+In most cases results of `POST` operations are returned as collection of elements under common node `<RESULTS>`. To handle multiple types the property `Results` of type `Response` is defined as array of objects. If you don't want to cast results manually, you can use generic method `ResultsOfType<T>()` that does it for you, or use one of predefined methods `ResultsOfTypeX()` like: `ResultsOfTypeArticle()`, `ResultsOfTypeCategory()`.
+
+``` csharp
+var requestResult = api.PostAsync(...); // Make any API call of type POST.
+var response = requestResult.Deserialize(); // Deserialize results into object of type Response.
+var resultsAsObjects = response.Results; // Get results as array of objects.
+var resultsAsDocuments = response.ResultsOfType<Document>(); // Get strongly typed results of specified type T.
+var resultsAsDocuments2 = response.ResultsOfTypeDocument(); // Get stronly typed results of type Document.
+```
+
+The methods that return strongly typed results don't throw exception. When property `Results` is euqal to `null` they return empty sequence of specified type.
