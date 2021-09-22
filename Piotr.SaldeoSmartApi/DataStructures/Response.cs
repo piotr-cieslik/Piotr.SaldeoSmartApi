@@ -35,6 +35,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DOCUMENT")]
         public Document[] Documents { get; set; }
 
+        [XmlElement("DOCUMENT")]
+        public Document Document { get; set; }
+
         [XmlArray("DOCUMENT_DELETES")]
         [XmlArrayItem("DOCUMENT_DELETE")]
         public DocumentDelete[] DocumentDeletes { get; set; }
