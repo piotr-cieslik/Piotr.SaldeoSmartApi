@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Piotr.SaldeoSmartApi.DataStructures;
 using Piotr.SaldeoSmartApi.Serialization;
@@ -10,22 +9,10 @@ namespace Piotr.SaldeoSmartApi.Examples
     {
         public async Task Run()
         {
-            // Specify your username.
             var username = Environment.GetEnvironmentVariable("SaldeoSmartUsername");
-
-            // Specify your token.
             var token = Environment.GetEnvironmentVariable("SaldeoSmartToken");
-
-            // Specify your company program id.
-            var companyProgramId = Environment.GetEnvironmentVariable("SaldeoSmartCompanyProgramId");
-
-            // Specify the server address.
             var server = new Uri("https://saldeo.brainshare.pl");
-
-            // Create an instance of the API.
             var api = new Api(server);
-
-            // Select path (operation).
             var path = Paths.DocumentListRecognized.Version21;
 
             // Specify document ids.
@@ -34,7 +21,7 @@ namespace Piotr.SaldeoSmartApi.Examples
                 {
                     OcrIdList = new string[]
                     {
-                        "1",
+                        "PUT ID HERE",
                     }
                 };
 
@@ -43,7 +30,7 @@ namespace Piotr.SaldeoSmartApi.Examples
                 new Parameters()
                     .AddUsername(username)
                     .AddRequestIdBasedOnUtcTime()
-                    .AddCommand(command);       
+                    .AddCommand(command);
             var httpRequest =
                 api.PostAsync(
                     path,
@@ -51,10 +38,6 @@ namespace Piotr.SaldeoSmartApi.Examples
                     new Token(token));
             var result =
                 await httpRequest.Deserialize();
-            Console.WriteLine(
-                string.Join(
-                    Environment.NewLine,
-                    result.Companies.Select(x => x.FullName)));
         }
     }
 }
