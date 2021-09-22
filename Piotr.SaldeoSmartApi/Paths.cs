@@ -71,6 +71,15 @@
         }
 
         /// <summary>
+        /// AE01 document.add_recognize.
+        /// </summary>
+        public static class DocumentAddRecognize
+        {
+            // TODO Unify naming convention between versions 1.x and versions 2.x of API.
+            public const string Version200 = "/api/xml/2.0/document/add_recognize";
+        }
+
+        /// <summary>
         /// SS06 document.recognize.
         /// </summary>
         public static class DocumentRecognize
