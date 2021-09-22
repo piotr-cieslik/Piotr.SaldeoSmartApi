@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Piotr.SaldeoSmartApi
@@ -56,17 +58,25 @@ namespace Piotr.SaldeoSmartApi
         {
             var signature =
                 new Signature(token, parameters);
-            var signedQueryString =
-                new QueryString(parameters.AddRequestSignature(signature));
+            // Solution taken from https://stackoverflow.com/a/51854330
+            var encodedItems =
+                parameters
+                    .AddRequestSignature(signature)
+                    .Select(x => WebUtility.UrlEncode(x.Key) + "=" + WebUtility.UrlEncode(x.Value));
+            var encodedContent =
+                new StringContent(
+                    string.Join("&", encodedItems),
+                    Encoding.UTF8,
+                    "application/x-www-form-urlencoded");
             var url =
-                Url(operationPath, signedQueryString);
-            var content =
-                new FormUrlEncodedContent(Enumerable.Empty<KeyValuePair<string, string>>());
-            return await _httpClient.PostAsync(url, content);
+                Url(operationPath);
+            return await _httpClient.PostAsync(url, encodedContent);
         }
 
         public void Dispose() => _httpClient.Dispose();
 
         private string Url(string operationPath, QueryString queryString) => $"{_server.ToString().TrimEnd('/')}/{operationPath.TrimStart('/')}{queryString}";
+
+        private string Url(string operationPath) => $"{_server.ToString().TrimEnd('/')}/{operationPath.TrimStart('/')}";
     }
 }

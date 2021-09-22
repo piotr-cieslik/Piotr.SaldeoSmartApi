@@ -21,7 +21,7 @@ namespace Piotr.SaldeoSmartApi.Tests
         }
 
         [Fact]
-        public async Task GetRequestShouldContainQueryString()
+        public async Task GetRequestShouldSendParametersAsQueryString()
         {
             // Given
             var parameters =
@@ -69,7 +69,7 @@ namespace Piotr.SaldeoSmartApi.Tests
         }
 
         [Fact]
-        public async Task PostRequestShouldContainQueryString()
+        public async Task PostRequestShouldNotSendParametersAsQueryString()
         {
             // Given
             var parameters =
@@ -84,27 +84,11 @@ namespace Piotr.SaldeoSmartApi.Tests
                 parameters,
                 Token());
 
-            // Then
-            // The regex check pattern ?[any]=[any]&[any]=[any]&[any]=[any]&[any]=[any].
-            Assert.Matches(
-                "\\?.*\\=.*\\&.*\\=.*\\&.*\\=.*&.*\\=.*",
-                _fakeHttpHandler.Uri.ToString());
-            Assert.Contains(
-                "username=user",
-                _fakeHttpHandler.Uri.ToString());
-            Assert.Contains(
-                "req_id=1",
-                _fakeHttpHandler.Uri.ToString());
-            Assert.Contains(
-                "req_sig=",
-                _fakeHttpHandler.Uri.ToString());
-            Assert.Contains(
-                "command=",
-                _fakeHttpHandler.Uri.ToString());
+            Assert.DoesNotContain(_fakeHttpHandler.Uri.ToString(), "?");
         }
 
         [Fact]
-        public async Task PostRequestShouldNotContainContent()
+        public async Task PostRequestShouldSentParametersAsContent()
         {
             // Given
             var parameters =
@@ -117,7 +101,7 @@ namespace Piotr.SaldeoSmartApi.Tests
                 Token());
 
             // Then
-            Assert.Empty(await _fakeHttpHandler.HttpContent.ReadAsByteArrayAsync());
+            Assert.NotEmpty(await _fakeHttpHandler.HttpContent.ReadAsByteArrayAsync());
         }
 
         [Fact]
