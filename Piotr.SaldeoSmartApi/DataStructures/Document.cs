@@ -6,7 +6,7 @@ namespace Piotr.SaldeoSmartApi.DataStructures
     public sealed class Document
     {
         [XmlElement("DOCUMENT_ID")]
-        public int DocumentId { get; set; }
+        public int? DocumentId { get; set; }
 
         [XmlElement("NUMBER")]
         public string Number { get; set; }
@@ -162,6 +162,11 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("ATTMNT_NAME")]
         public string AttmntName { get; set; }
 
+        // No matter how crazy it is, the "VatNumber" field has to be defined before "SplitMode" to make request works.
+        // In other case the method "document.add_recognize" returns error saying that VatNumber is required.
+        [XmlElement("VAT_NUMBER")]
+        public string VatNumber { get; set; }
+
         [XmlElement("SPLIT_MODE")]
         public string SplitMode { get; set; }
 
@@ -192,6 +197,36 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 
         [XmlElement("ERROR_MESSAGE")]
         public string ErrorMessage { get; set; }
+
+        // Do not serialize null values
+        // https://docs.microsoft.com/en-us/dotnet/desktop/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods?view=netframeworkdesktop-4.8&redirectedfrom=MSDN
+        public bool ShouldSerializeDocumentId() => DocumentId != null;
+
+        public bool ShouldSerializeIssueDate() => IssueDate != null;
+
+        public bool ShouldSerializeSaleDate() => SaleDate != null;
+
+        public bool ShouldSerializePaymentDate() => PaymentDate != null;
+
+        public bool ShouldSerializeReceiveDate() => ReceiveDate != null;
+
+        public bool ShouldSerializeIsVatMargin() => IsVatMargin != null;
+
+        public bool ShouldSerializeIsCashBasis() => IsCashBasis != null;
+
+        public bool ShouldSerializeSum() => Sum != null;
+
+        public bool ShouldSerializeCurrencyDate() => CurrencyDate != null;
+
+        public bool ShouldSerializeApproved() => Approved != null;
+
+        public bool ShouldSerializeArchivizationDate() => ArchivizationDate != null;
+
+        public bool ShouldSerializePageCount() => PageCount != null;
+
+        public bool ShouldSerializeIsDocumentPaid() => IsDocumentPaid != null;
+
+        public bool ShouldSerializeIsDocumentBelongToCompany() => IsDocumentBelongToCompany != null;
 
         // TODO PROGRAM_PARAMETERS
     }

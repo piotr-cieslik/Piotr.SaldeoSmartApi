@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Piotr.SaldeoSmartApi.Serialization;
+
 namespace Piotr.SaldeoSmartApi
 {
     public static class ParametersExtensions
@@ -17,5 +19,12 @@ namespace Piotr.SaldeoSmartApi
         public static Parameters AddRequestSignature(this Parameters parameters, string value) => parameters.Add("req_sig", value);
 
         public static Parameters AddUsername(this Parameters parameters, string value) => parameters.Add("username", value);
+
+        public static Parameters AddAttmnt(this Parameters parameters, string id, byte[] file)
+        {
+            var gzip = new GZippedBytes(file);
+            var base64 = new Base64String(gzip);
+            return parameters.Add($"attmnt_{id}", base64);
+        }
     }
 }

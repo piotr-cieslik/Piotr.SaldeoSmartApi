@@ -10,7 +10,7 @@
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageTags>API Saldeo SaldeoSMART</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <CodeAnalysisRuleSet>Ruleset.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>

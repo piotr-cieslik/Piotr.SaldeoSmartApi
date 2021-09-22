@@ -3,7 +3,7 @@
     public static class Paths
     {
         /// <summary>
-        /// SS01 company.create
+        /// SS01 company.create.
         /// </summary>
         public static class CompanyCreate
         {
@@ -15,7 +15,7 @@
         }
 
         /// <summary>
-        /// SS02 contractor.merge
+        /// SS02 contractor.merge.
         /// </summary>
         public static class ContractorMerge
         {
@@ -23,7 +23,7 @@
         }
 
         /// <summary>
-        /// SS03 document.list
+        /// SS03 document.list.
         /// </summary>
         public static class DocumentList
         {
@@ -51,7 +51,7 @@
         }
 
         /// <summary>
-        /// SS04 company.list
+        /// SS04 company.list.
         /// </summary>
         public static class CompanyList
         {
@@ -63,7 +63,7 @@
         }
 
         /// <summary>
-        /// SS05 document.add
+        /// SS05 document.add.
         /// </summary>
         public static class DocumentAdd
         {
@@ -71,7 +71,16 @@
         }
 
         /// <summary>
-        /// SS06 document.recognize
+        /// AE01 document.add_recognize.
+        /// </summary>
+        public static class DocumentAddRecognize
+        {
+            // TODO Unify naming convention between versions 1.x and versions 2.x of API.
+            public const string Version200 = "/api/xml/2.0/document/add_recognize";
+        }
+
+        /// <summary>
+        /// SS06 document.recognize.
         /// </summary>
         public static class DocumentRecognize
         {
@@ -83,7 +92,7 @@
         }
 
         /// <summary>
-        /// SS07 contractor.list
+        /// SS07 contractor.list.
         /// </summary>
         public static class ContractorList
         {
@@ -91,7 +100,7 @@
         }
 
         /// <summary>
-        /// SS08 document.list_recognized
+        /// SS08 document.list_recognized.
         /// </summary>
         public static class DocumentListRecognized
         {
@@ -119,7 +128,7 @@
         }
 
         /// <summary>
-        /// SS09 category.merge
+        /// SS09 category.merge.
         /// </summary>
         public static class CategoryMerge
         {
@@ -127,7 +136,7 @@
         }
 
         /// <summary>
-        /// SS10 register.merge
+        /// SS10 register.merge.
         /// </summary>
         public static class RegisterMerge
         {
@@ -135,7 +144,7 @@
         }
 
         /// <summary>
-        /// SS11 payment_method.merge
+        /// SS11 payment_method.merge.
         /// </summary>
         public static class PaymentMethodMerge
         {
@@ -143,7 +152,7 @@
         }
 
         /// <summary>
-        /// SS12 dimension.merge
+        /// SS12 dimension.merge.
         /// </summary>
         public static class DimensionMerge
         {
@@ -157,7 +166,7 @@
         }
 
         /// <summary>
-        /// SS13 document.sync
+        /// SS13 document.sync.
         /// </summary>
         public static class DocumentSync
         {
@@ -171,7 +180,7 @@
         }
 
         /// <summary>
-        /// SS14 description.merge
+        /// SS14 description.merge.
         /// </summary>
         public static class DescriptionMerge
         {
@@ -181,7 +190,7 @@
         }
 
         /// <summary>
-        /// SS15 company.synchronize
+        /// SS15 company.synchronize.
         /// </summary>
         public static class CompanySynchronize
         {
@@ -189,7 +198,7 @@
         }
 
         /// <summary>
-        /// SS16 document.delete
+        /// SS16 document.delete.
         /// </summary>
         public static class DocumentDelete
         {
@@ -199,7 +208,7 @@
         }
 
         /// <summary>
-        /// SS17 document.update
+        /// SS17 document.update.
         /// </summary>
         public static class DocumentUpdate
         {
@@ -209,7 +218,7 @@
         }
 
         /// <summary>
-        /// SS18 document.search
+        /// SS18 document.search.
         /// </summary>
         public static class DocumentSearch
         {
@@ -237,7 +246,7 @@
         }
 
         /// <summary>
-        /// SS19 bank_statement.list
+        /// SS19 bank_statement.list.
         /// </summary>
         public static class BankStatementList
         {
@@ -249,7 +258,7 @@
         }
 
         /// <summary>
-        /// SS20 document_dimension.merge
+        /// SS20 document_dimension.merge.
         /// </summary>
         public static class DocumentDimensionMerge
         {
@@ -261,7 +270,7 @@
         }
 
         /// <summary>
-        /// SS21 article.merge
+        /// SS21 article.merge.
         /// </summary>
         public static class ArticleMerge
         {

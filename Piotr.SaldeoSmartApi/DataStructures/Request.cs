@@ -29,6 +29,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlArrayItem("DIMENSION")]
         public Dimension[] Dimensions { get; set; }
 
+        [XmlElement("DOCUMENT")]
+        public Document Document { get; set; }
+
         [XmlArray("DOCUMENTS")]
         [XmlArrayItem("DOCUMENT")]
         public Document[] Documents { get; set; }
@@ -58,5 +61,9 @@ namespace Piotr.SaldeoSmartApi.DataStructures
 
         [XmlElement("FIELDS")]
         public Fields Fields { get; set; }
+
+        [XmlArray("OCR_ID_LIST")]
+        [XmlArrayItem("OCR_ORIGIN_ID")]
+        public string[] OcrIdList { get; set; }
     }
 }
