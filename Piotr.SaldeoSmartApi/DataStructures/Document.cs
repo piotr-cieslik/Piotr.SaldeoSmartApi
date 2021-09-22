@@ -162,6 +162,11 @@ namespace Piotr.SaldeoSmartApi.DataStructures
         [XmlElement("ATTMNT_NAME")]
         public string AttmntName { get; set; }
 
+        // No matter how crazy it is, the "VatNumber" field has to be defined before "SplitMode" to make request works.
+        // In other case the method "document.add_recognize" returns error saying that VatNumber is required.
+        [XmlElement("VAT_NUMBER")]
+        public string VatNumber { get; set; }
+
         [XmlElement("SPLIT_MODE")]
         public string SplitMode { get; set; }
 
