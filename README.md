@@ -16,6 +16,14 @@ Before using it, please make sure you have valid username and token. All operati
 ## Versioning (important!)
 Before version 1.0.0 I allow myself to introduce breaking changes with each release of new MINOR version (read version number as MAJOR.MINOR.PATCH). I will not introduce breaking changes to new PATCH versions.
 
+Version 0.3.0
+- POST request send parameters in request content. Previously the parameters has been sent as query string.
+- Add new operation to paths `document.add_recognize`.
+- Make it possible to sent file as command parameter (they call it `attmnt`).
+- Serialization process of `Document` type skips fields with value set to `null`. Before that nullable data structure has been always serialized to XML. It causes problem with newly added operation `document.add_recognize` because it requires them to be not set (instead of null).
+- Add new examples.
+- The changes made in version 0.3.0 should allow to use `API Engine` feature of Saldeo. Full documentation can be found here (https://docs.google.com/document/d/1JDkicv1h7_-lOYO0vv6xyvDuXEFtvrKIrxr5wt5-9sM/edit).
+
 Version 0.2.0
 - Rename properties to ensure common naming convention.
 - Make properties `Supplier` and `Customer` of `Contractor` nullable.
@@ -109,7 +117,7 @@ var result =
 ## Parameters
 The class `Parameters` represent key-value pair, immutable dictionary that holds information specified by operation. It's very simple type that contains single method `Add(string key, string value)`. To make it easier to use, there is plenty of predefined extension method like `AddUsername(string value)` or `AddRequestId(string value)`. Feel free to define you own extension methods for missing parameters.
 
-You can define parameter name explicity:
+You can define parameter name explicitly:
 ``` csharp
 var parameters = new Parameters().Add("username", "piotr");
 ```
@@ -129,6 +137,7 @@ The predefined parameters are:
 - `AddRequestIdBasedOnUtcTime()`
 - `AddRequestSignature(..)`
 - `AddUsername(..)`
+- `AddAddAttmnt(..)`
 
 ## Results
 In most cases results of `POST` operations are returned as collection of elements under common node `<RESULTS>`. To handle multiple types the property `Results` of type `Response` is defined as array of objects. If you don't want to cast results manually, you can use generic method `ResultsOfType<T>()` that does it for you, or use one of predefined methods `ResultsOfTypeX()` like: `ResultsOfTypeArticle()`, `ResultsOfTypeCategory()`.
@@ -141,4 +150,4 @@ var resultsAsDocuments = response.ResultsOfType<Document>(); // Get strongly typ
 var resultsAsDocuments2 = response.ResultsOfTypeDocument(); // Get stronly typed results of type Document.
 ```
 
-The methods that return strongly typed results don't throw exception. When property `Results` is euqal to `null` they return empty sequence of specified type.
+The methods that return strongly typed results don't throw exception. When property `Results` is equal to `null` they return empty sequence of specified type.
